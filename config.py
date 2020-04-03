@@ -11,5 +11,5 @@ message2 = os.environ.get('message2')
 message3 = os.environ.get('message3')
 
 #don't touch this
-Debug = True
+Debug = False
 delay_send = 0.1
