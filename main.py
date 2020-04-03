@@ -8,7 +8,7 @@ import sys, os, random
 import asyncio, kb_gen
 print("Libraries is OK")
 # WARNING! if you start bot on heroku isLocal must be false
-isLocal = True
+isLocal = False
 # WARNING!
 
 # for choice local cfg or cfg
