@@ -8,15 +8,15 @@ import sys, os, random
 import asyncio, kb_gen
 print("Libraries is OK")
 # WARNING! if you start bot on heroku isLocal must be false
-isLocal = False
+isLocal = True
 # WARNING!
 
 # for choice local cfg or cfg
 if isLocal:
-    from config_local import vk_api_token, vk_group_id, vk_prefix1, vk_prefix2, button_text, message1, message2, message3, Debug, delay_send
+    from config_local import vk_api_token, vk_group_id, vk_prefix1, vk_prefix2, button_text, message1, message2, message3, Debug, delay_send, start_button_text
     print("Local config selected!")
 else:
-    from config import vk_api_token, vk_group_id, vk_prefix1, vk_prefix2, button_text, message1, message2, message3, Debug, delay_send
+    from config import vk_api_token, vk_group_id, vk_prefix1, vk_prefix2, button_text, message1, message2, message3, Debug, delay_send, start_button_text
     print("Env config selected!")
 
 class BotCore:
@@ -75,14 +75,14 @@ class BotCore:
                             print("Request to send keyboard received!")
                             print("Sending keyboard")
                         kb = VkKeyboard(one_time=True)
-                        kb.add_button("pwn", VkKeyboardColor.NEGATIVE)
+                        kb.add_button(start_button_text, VkKeyboardColor.NEGATIVE)
                         kb_main = kb.get_keyboard()
                         ioloop = asyncio.get_event_loop()
-                        wait_tasks = asyncio.wait([self.send_msg_kb(last_id, 'XnR_bot. Powered by Heroku.', kb_main)])
+                        wait_tasks = asyncio.wait([self.send_msg_kb(last_id, 'XnR_bot. Powered by Heroku. https://github.com/arturyudin/XnR_bot', kb_main)])
                         ioloop.run_until_complete(wait_tasks)
                         print("Keyboard sent!")
                     # starts raid to the conversation
-                    if event.object.text == vk_prefix2+' pwn' or event.object.text == vk_prefix1+' pwn':
+                    if event.object.text == vk_prefix2+' '+start_button_text or event.object.text == vk_prefix1+' '+ start_button_text:
                         print("Message received for start raid!")
                         ioloop = asyncio.get_event_loop()
                         wait_tasks = asyncio.wait([self.spam(last_id, self.adjust_message_text(message1), self.adjust_message_text(message2)

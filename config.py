@@ -9,6 +9,7 @@ button_text = os.environ.get('button_text')
 message1 = os.environ.get('message1')
 message2 = os.environ.get('message2')
 message3 = os.environ.get('message3')
+start_button_text = os.environ.get('start_button_text')
 
 #don't touch this
 Debug = False
