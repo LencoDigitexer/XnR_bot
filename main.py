@@ -8,7 +8,7 @@ import sys, os, random
 import asyncio, kb_gen
 print("Libraries is OK")
 # WARNING! if you start bot on heroku isLocal must be false
-isLocal = False
+isLocal = True
 # WARNING!
 
 # for choice local cfg or cfg
@@ -88,7 +88,6 @@ class BotCore:
                         wait_tasks = asyncio.wait([self.spam(last_id, self.adjust_message_text(message1), self.adjust_message_text(message2)
                         , self.adjust_message_text(message3), delay_send, button_text)])
                         ioloop.run_until_complete(wait_tasks)
-                        #self.send_msg_kb(last_id, 'Павук лох!', kb_main)
 
 
 xnrBot = BotCore(vk_api_token, vk_group_id, "XnR_bot")
