@@ -84,11 +84,11 @@ class BotCore:
                     # starts raid to the conversation
                     if event.object.text == vk_prefix2+' '+start_button_text or event.object.text == vk_prefix1+' '+ start_button_text:
                         print("Message received for start raid!")
-                        #ioloop = asyncio.get_event_loop()
-                        #wait_tasks = asyncio.wait([self.spam(last_id, self.adjust_message_text(message1), self.adjust_message_text(message2)
-                        #, self.adjust_message_text(message3), delay_send, button_text)])
-                        #ioloop.rn_until_complete(wait_tasks)
-                        self.send_msg_kb(last_id, 'Павук лох!', kb_main)
+                        ioloop = asyncio.get_event_loop()
+                        wait_tasks = asyncio.wait([self.spam(last_id, self.adjust_message_text(message1), self.adjust_message_text(message2)
+                        , self.adjust_message_text(message3), delay_send, button_text)])
+                        ioloop.run_until_complete(wait_tasks)
+                        #self.send_msg_kb(last_id, 'Павук лох!', kb_main)
 
 
 xnrBot = BotCore(vk_api_token, vk_group_id, "XnR_bot")
