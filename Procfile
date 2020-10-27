@@ -1,1 +1,1 @@
-worker: python main.py
+worker: python VKbotDM9G.py

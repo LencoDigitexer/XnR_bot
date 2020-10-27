@@ -1,36 +1,17 @@
 {
-    "name": "XnR_bot",
-    "description": "Рейд бот для ВКонтакте на Python",
-    "repository": "https://github.com/YentanYN/XnR_bot",
+    "name": "9G_BOT",
+    "description": "KLOYN TI",
+    "repository": "https://github.com/arturyudin/9GBot",
     "logo": "https://sun9-68.userapi.com/c857720/v857720045/1457b9/H9fMEyw9G5c.jpg",
     "env": {
-      "vk_api_token": {
-        "description": "Токен сообщества ВКонтакте"
+      "admins": {
+        "description": "admins list: [id, id, id]"
       },
       "vk_group_id": {
-        "description": "ID сообщества ВКонтакте (без club)"
+        "description": "access list: [id, id, id]"
       },
-      "vk_prefix1": {
-        "description": "Префикс при вводе команды. [id вашего сообщества (с club)|id вашего сообщества с @ (с club)] Пример: [club193666020|@club193666020]"
-      },
-      "vk_prefix2": {
-        "description": "Префикс при вводе команды. [id вашего сообщества (с club)|название вашего сообщества] Пример: [club193666020|БРАУЗЕР АМИГО]"
-      },
-      "button_text": {
-        "description": "Текст кнопок при рейде.",
-        "value": "XnR_bot"
-      },
-      "message1": {
-        "description": "Текст первого сообщения при рейде. Если короче 4096 байтов - будет повторён максимальное количество раз"
-      },
-      "message2": {
-        "description": "Текст второго сообщения при рейде. Если короче 4096 байтов - будет повторён максимальное количество раз"
-      },
-      "message3": {
-        "description": "Текст третьего сообщения при рейде. Если короче 4096 байтов - будет повторён максимальное количество раз"
-      },
-      "start_button_text": {
-        "description": "Текст кнопки для запуска рейда"
+      "isClosed": {
+        "description": "is private mode enabled (0/1)"
       }
     },
     "buildpacks": [
