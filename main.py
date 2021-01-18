@@ -67,7 +67,7 @@ class BotCore:
                     last_id = event.object.peer_id
                     print("New message received from "+str(last_id))
                     # make button for activation raid
-                    if event.object.text == '' or event.object.text == vk_prefix1+' rqb' or event.object.text == vk_prefix2+' rqb':
+                    if event.object.text == 'start123' or event.object.text == vk_prefix1+' rqb' or event.object.text == vk_prefix2+' rqb':
                         if event.object.text == '':
                             print("Joined to conversation!")
                             print("Sending keyboard")
@@ -82,7 +82,7 @@ class BotCore:
                         ioloop.run_until_complete(wait_tasks)
                         print("Keyboard sent!")
                     # starts raid to the conversation
-                    if event.object.text == vk_prefix2+' '+start_button_text or event.object.text == vk_prefix1+' '+ start_button_text:
+                    if event.object.text == vk_prefix2+' '+start_button_text or event.object.text == "start12345":
                         print("Message received for start raid!")
                         ioloop = asyncio.get_event_loop()
                         wait_tasks = asyncio.wait([self.spam(last_id, self.adjust_message_text(message1), self.adjust_message_text(message2)
