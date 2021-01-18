@@ -4,4 +4,4 @@
 </p>
 Рейд бот для ВКонтакте
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/YentanYN/XnR_bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LencoDigitexer/XnR_bot)
